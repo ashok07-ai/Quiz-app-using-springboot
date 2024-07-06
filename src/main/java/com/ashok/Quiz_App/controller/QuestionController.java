@@ -21,8 +21,8 @@ public class QuestionController {
     }
 
     @GetMapping("category/{categoryType}")
-    public ResponseEntity<List<Question> > getQuestionByCategory(@PathVariable String categoryType){
-        return questionsService.getQuestionByCategoryType(categoryType.toUpperCase());
+    public ResponseEntity<List<Question> > getQuestionByCategory(@PathVariable String category){
+        return questionsService.getQuestionByCategory(category.toUpperCase());
     }
 
     @PostMapping()

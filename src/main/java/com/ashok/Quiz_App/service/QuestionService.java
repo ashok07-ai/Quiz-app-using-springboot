@@ -26,9 +26,9 @@ public class QuestionService {
         }
     }
 
-    public ResponseEntity<List<Question>> getQuestionByCategoryType(String categoryType) {
+    public ResponseEntity<List<Question>> getQuestionByCategory(String category) {
         try {
-            List<Question> questions = questionDao.findByCategory(categoryType);
+            List<Question> questions = questionDao.findByCategory(category);
             return ResponseEntity.ok(questions);
         } catch (Exception e) {
             e.printStackTrace();
